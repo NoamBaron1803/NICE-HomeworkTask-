@@ -1,8 +1,19 @@
 # Compiled class file
 *.class
 
+# Maven
+/target/
+/out/
+
 # Log file
 *.log
+
+# IDEs
+.idea/
+*.iml
+.project
+.classpath
+.settings/
 
 # BlueJ files
 *.ctxt
