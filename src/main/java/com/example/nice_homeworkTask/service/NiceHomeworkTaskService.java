@@ -171,30 +171,4 @@ public class NiceHomeworkTaskService {
         // Attempt #3: success -> do nothing.
     }
 
-    /* private static final Map<String, String> DICTIONARY; */
-
-    /*
-     * static {
-     * LinkedHashMap<String, String> m = new LinkedHashMap<>();
-     * m.put("reset password", "ResetPasswordTask");
-     * m.put("forgot password", "ResetPasswordTask");
-     * m.put("check order", "CheckOrderStatusTask");
-     * m.put("track order", "CheckOrderStatusTask");
-     * DICTIONARY = Collections.unmodifiableMap(m);
-     * }
-     */
-
-    /*
-     * public String suggestTask(String utterance) {
-     * if (utterance == null)
-     * return NO_TASK;
-     * String lower = utterance.toLowerCase();
-     * for (Map.Entry<String, String> e : DICTIONARY.entrySet()) {
-     * if (lower.contains(e.getKey()))
-     * return e.getValue();
-     * }
-     * return NO_TASK;
-     * }
-     */
-
 }
