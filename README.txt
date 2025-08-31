@@ -20,17 +20,20 @@ Invoke-RestMethod -Method Post `
   -Uri http://localhost:8080/suggestTask `
   -ContentType "application/json" `
   -Body '{"utterance":"reset password","userId":"u1","sessionId":"s1","timestamp":"2025-08-21T12:00:00Z"}'
+
 ##2. CheckOrderStatusTask, run:
 Invoke-RestMethod -Method Post `
   -Uri http://localhost:8080/suggestTask `
   -ContentType "application/json" `
   -Body '{"utterance":"check order","userId":"u1","sessionId":"s1","timestamp":"2025-08-21T12:00:00Z"}'
+
 ##3. NoTaskFound, run:
 Invoke-RestMethod -Method Post `
   -Uri http://localhost:8080/suggestTask `
   -ContentType "application/json" `
   -Body '{"utterance":"hello there","userId":"u1","sessionId":"s1","timestamp":"2025-08-21T12:00:00Z"}'
-##4. Validation error (400) -
+
+##4. Validation error (400), run:
 Invoke-RestMethod -Method Post `
   -Uri http://localhost:8080/suggestTask `
   -ContentType "application/json" `
@@ -58,6 +61,8 @@ mvn "-Dit.test=SuggestTaskIT" failsafe:integration-test failsafe:verify
 
 #Run only Retry tests (NiceHomeworkTaskServiceRetryTest file)
 mvn "-Dtest=NiceHomeworkTaskServiceRetryTest" test
+
+
 
 
 
