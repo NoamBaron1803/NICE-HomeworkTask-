@@ -6,11 +6,11 @@ Implement a Web API (with bonus). Quick run & test guide.
 - Java 17+
 - Maven 3.9+
 
-## Start the app (dev)
-```powershell
+## Option 1 - Start the app (dev)
+```powershell'''
 mvn spring-boot:run
 
-#Default port is 8080. To run on a different port : 
+# Default port is 8080, to run on a different port : 
 mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=9090"
 
 
@@ -37,19 +37,29 @@ Invoke-RestMethod -Method Post `
   -Body '{"utterance":"","userId":"","sessionId":"","timestamp":null}'
 
 
-# All tests (unit + integration + retry)
+## Option 2 - Build & run the JAR
+mvn clean package
+java -jar target/nice-homework-task-0.0.1-SNAPSHOT.jar
+
+# Default port is 8080, to run on a different port
+java -jar target/nice-homework-task-0.0.1-SNAPSHOT.jar --server.port=9090 
+
+Then call the API as shown above
+
+
+# Run all tests (unit + integration + retry)
 mvn clean verify
 
 #Run only unit test (NiceHomeworkTaskServiceTest file)
 mvn "-Dtest=NiceHomeworkTaskServiceTest" test
 
-
 #Run only integration tests (SuggestTaskIT file)
 mvn "-Dit.test=SuggestTaskIT" failsafe:integration-test failsafe:verify
 
-
 #Run only Retry tests (NiceHomeworkTaskServiceRetryTest file)
 mvn "-Dtest=NiceHomeworkTaskServiceRetryTest" test
+
+
 
 
 
