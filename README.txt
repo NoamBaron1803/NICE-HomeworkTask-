@@ -63,12 +63,3 @@ mvn "-Dit.test=SuggestTaskIT" failsafe:integration-test failsafe:verify
 mvn "-Dtest=NiceHomeworkTaskServiceRetryTest" test
 
 
-
-
-
-
-
-
-
-
-
